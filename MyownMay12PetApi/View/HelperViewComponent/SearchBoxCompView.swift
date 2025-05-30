@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchBoxCompView: View {
-    @State var text: String = ""
+    @Binding var text: String
 //    hide and showsearchbar step 1
     @State var showSearchBar: Bool = false
     var body: some View {
@@ -39,5 +39,5 @@ struct SearchBoxCompView: View {
 }
 
 #Preview {
-    SearchBoxCompView()
+    SearchBoxCompView(text: .constant(""))
 }

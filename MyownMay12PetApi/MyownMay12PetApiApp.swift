@@ -11,7 +11,8 @@ import SwiftUI
 struct MyownMay12PetApiApp: App {
     var body: some Scene {
         WindowGroup {
-            SquareBoxCompView(petArrayOfPetModel: AppHelper.loadPetBreedsFromJSON() )
+            HomeView()
+//            SquareBoxCompView(petArrayOfPetModel: AppHelper.loadPetBreedsFromJSON() )
         }
     }
 }

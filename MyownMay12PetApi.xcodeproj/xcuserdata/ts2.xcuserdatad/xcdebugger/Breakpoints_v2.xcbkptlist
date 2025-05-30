@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EFACD1D1-0B98-4836-8838-E02E04F2BE7F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyownMay12PetApi/View/HelperViewComponent/SquareBoxCompView.swift"
@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "11FEB167-D2B0-48AA-A9B1-D65D413E5672"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyownMay12PetApi/View/HelperViewComponent/SquareBoxCompView.swift"
@@ -33,6 +33,22 @@
             startingLineNumber = "41"
             endingLineNumber = "41"
             landmarkName = "loadPetBreedsFromJSON()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8042B765-FC0C-42E0-8E92-8AE3F7EBD4F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyownMay12PetApi/View/HomeFolder/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "filterFunc()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
