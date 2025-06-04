@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 struct AppHelper {
     
     static func loadPetBreedsFromJSON() -> [PetModel] {
@@ -51,57 +52,54 @@ struct AppHelper {
     }
     
 }
-struct Pet: Identifiable{
+
+struct Pet: Identifiable {
     
-    let name:String
+    let name: String
     
-    let imageName:String
+    let imageName: String
     
     let id = UUID()
     
 }
 
- 
-    
 struct SquareBoxCompView: View {
     var petArrayOfPetModel : [PetModel]
     let columnsVar = [
         GridItem(.flexible()),
         GridItem(.flexible()),
-//        GridItem(.flexible(minimum: 100, maximum: 200)),
     ]
     
-    let petArray: [Pet] = [
-        Pet (name:"Fluffy", imageName:"")
-    ]
     let widthBox = (UIScreen.main.bounds.width - 32 - 20) / 2
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columnsVar, spacing: 20) {
-                
-                ForEach(petArrayOfPetModel){
-                    pet in
-                    ZStack(){
+                ForEach(petArrayOfPetModel) { pet in
+                    ZStack {
                         Rectangle()
                             .frame(width: widthBox, height: 150)
                             .foregroundColor(Color(hex: "f1c40f"))
-                        
                             .cornerRadius(25)
                         
-                        
-                        Image(pet.image, bundle: nil)
-                        
-                            .resizable()
-                        
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(pet.petName)
+                                .font(.system(size: 14, weight: .semibold))
+                                .foregroundColor(.black)
                             
-//                            .scaledToFit()
-                            .scaledToFill()
-                            .frame(width:80, height: 120)
-                         
+                            Text("Age: \(pet.age)")
+                                .font(.system(size: 12))
+                                .foregroundColor(.black)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 30)
+                        .padding(.vertical, 40)
                         
+                        Image(pet.image)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 80, height: 120)
                             .offset(x: 60, y: 10)
                     }
-                   
                 }
             }
         }
